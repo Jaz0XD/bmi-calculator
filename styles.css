@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Nerko+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;500;600;700&family=Press+Start+2P&display=swap');
+
+body {
+  background-color: #232323;
+  font-family: "Bai Jamejuree", sans-serif;
+  
+}
+h1 {
+  color: wheat;
+  font-size: 50px;
+  font-family: "Nerko One", sans-serif;
+}
+
+.txtcolor {
+  color: white;
+}
+
+
+.bg {
+  position:sticky;
+  opacity:1;
+  top: -0.1em;
+  left: -0.5em;
+  z-index: 50;
+  width: 99vw;
+  height: 10rem;
+}
+
+.bmi-div {
+  margin-top: 20px;
+}
+
+.button {
+  background-color: #535353;
+  color: #000000;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: "Nerko One", sans-serif;
+}
+
+.button:hover {
+  background-color: #ffffff;
+  color: black;
+  animation: forwards;
+  transition: cubic-bezier(1, 0, 0, 1);
+  transition-duration: 100ms;
+}
+
+.navbar {
+  position: relative;
+}
+
+.navbar a {
+  font-size: 1.7rem;
+  color: #ffffff;
+  font-weight: 500;
+  margin-left: 3.5rem;
+  transition: 0.3s;
+}
+
+.navbar a:hover,
+.navbar a:active {
+  color: #ffffff;
+}
+
+.rainbow {
+  animation-name: rainbow;
+  animation-timing-function: linear;
+  animation-duration: 20s;
+  animation-iteration-count: infinite;
+  font-size: 60px;
+  font-family: 'Press Start 2P', cursive;
+}
+
+
+
+@keyframes rainbow {
+
+  0% {
+      color: rgb(150, 0, 0);
+  }
+  15% {
+      color:rgb(200, 115, 0);
+  }
+  30% {
+      color: rgb(180, 180, 0);
+  }
+  45% {
+      color: green;
+  }
+  60% {
+      color: rgb(0, 0, 150);
+  }
+  75% {
+      color: indigo;
+  }
+  90% {
+      color: violet;
+  }
+  
+  100% {
+      color: rgb(150, 0, 0);
+  }
+}

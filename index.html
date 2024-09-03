@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BMI</title>
+    <link rel="icon" type="image/x-icon" href="logo.png" />
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+        margin-top: 10px;
+      }
+      input {
+        margin: 10px;
+      }
+      .result {
+        margin-top: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <img src="bg2.jpg" class="bg" />
+    <div class="bmi-div">
+        <span class="rainbow">RGCET BRAIN STORM</span>
+      <h1>BMI Calculator</h1>
+      <div class="txtcolor">
+        <label for="height">Height (cm):</label>
+
+        <input type="text" id="height" placeholder="Enter Your Height"/>
+      </div>
+      <div class="txtcolor">
+        <label for="weight">Weight (kg):</label>
+        <input type="text" id="weight" placeholder="Enter Your Weight" />
+      </div>
+      <button onclick="calculateBMI()" class="button">Calculate</button>
+      <div class="result txtcolor" id="result"></div>
+    </div>
+
+    <script>
+      function calculateBMI() {
+        var height = parseFloat(document.getElementById("height").value) / 100;
+        var weight = parseFloat(document.getElementById("weight").value);
+        if (isNaN(height) || isNaN(weight) || height <= 0 || weight <= 0) {
+          alert("Please enter valid numbers for height and weight.");
+          return;
+        }
+        var bmi = weight / (height * height);
+        var resultText;
+        if (bmi < 18.5) {
+          resultText = "Underweight";
+        } else if (bmi < 25) {
+          resultText = "Normal weight";
+        } else if (bmi < 30) {
+          resultText = "Overweight";
+        } else {
+          resultText = "Obesity";
+        }
+        document.getElementById(
+          "result"
+        ).innerHTML = `Your BMI is ${bmi.toFixed(2)} (${resultText})`;
+      }
+    </script>
+  </body>
+</html>
